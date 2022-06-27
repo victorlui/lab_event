@@ -24,12 +24,12 @@ export function Lesson(props: LessonProps) {
   const isActive = slug === props.slug;
 
   return (
-    <Link to={`/event/lesson/${props.slug}`} className="group">
+    <Link  to={isLesson && `/event/lesson/${props.slug}`} className="group">
       <span className="text-gray-300">{dataFormat}</span>
 
       <div
-        className={`rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 ${
-          isActive ? "bg-green-500" : ""
+        className={`rounded border border-gray-500 p-4 mt-2  ${
+          isActive ? "bg-green-500 group-hover:border-green-500" : ""
         }`}
       >
         <header className="flex items-center justify-between">
@@ -49,7 +49,11 @@ export function Lesson(props: LessonProps) {
           </span>
         </header>
 
-        <strong className="text-gray-200 mt-5 block">{props.title}</strong>
+        <strong
+          className={`mt-5 block ${isActive ? "text-white" : "text-gray-200"} `}
+        >
+          {props.title}
+        </strong>
       </div>
     </Link>
   );
