@@ -24,7 +24,10 @@ export function Lesson(props: LessonProps) {
   const isActive = slug === props.slug;
 
   return (
-    <Link  to={isLesson && `/event/lesson/${props.slug}`} className="group">
+    <Link
+      to={isLesson ? `/event/lesson/${props.slug}` : ""}
+      className={`group ${!isLesson && "cursor-not-allowed"} `}
+    >
       <span className="text-gray-300">{dataFormat}</span>
 
       <div
@@ -34,7 +37,7 @@ export function Lesson(props: LessonProps) {
       >
         <header className="flex items-center justify-between">
           {isLesson ? (
-            <span className="text-sm text-blue-500 font-medium flex items-center gap-2">
+            <span className="text-sm  text-blue-500 font-medium flex items-center gap-2">
               <CheckCircle size={20} />
               Conteúdo liberado
             </span>
