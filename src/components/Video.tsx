@@ -39,7 +39,7 @@ export function Video({ slug }: Props) {
       </div>
 
       <div className="p-8 max-w-[1100px] mx-auto">
-        <div className="flex items-center gap-16 mobile:flex-col laptop:flex-row desktop:flex-row">
+        <div className="flex items-center gap-16 sm:flex-col">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">{data.lesson.title}</h1>
             <p className="mt-4 text-gray-200 leading-relaxed">
@@ -64,7 +64,7 @@ export function Video({ slug }: Props) {
               </div>
             )}
           </div>
-          <div className="flex flex-col gap-4 mobile:w-[100%] laptop:w-[35%] desktop:w-[40%]">
+          <div className="flex flex-col gap-4 sm:w-[100%]">
             <a
               href="#"
               className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors"
@@ -83,7 +83,7 @@ export function Video({ slug }: Props) {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid grid-cols-2mobile:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2">
+        <div className="gap-8 mt-20 grid grid-cols-2 sm:grid-cols-1">
           <a
             href="#"
             className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
