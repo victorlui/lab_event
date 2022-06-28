@@ -2,6 +2,12 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
+    screens: {
+      mobile: "320px",
+      tablet: "640px",
+      laptop: "1024px",
+      desktop: "1280px",
+    },
     extend: {
       backgroundImage: {
         blur: "url(/src/assets/background.png)",
